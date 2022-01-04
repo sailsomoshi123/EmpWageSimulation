@@ -6,20 +6,26 @@ public class EmployeeWageComputation {
         final int IS_FULL_TIME = 1;
         final int IS_PART_TIME = 2;
         final int EMP_RATE_PER_HOUR = 20;
+        final int NUM_OF_DAYS = 20;
         int empWages = 0;
         int empHour = 0;
-        int empCheck = (int) Math.floor(Math.random() * 10) % 3;
-        switch (empCheck) {
-            case IS_FULL_TIME:
-                empHour = 8;
-                break;
-            case IS_PART_TIME:
-                empHour = 4;
-                break;
-            default:
-                empHour = 0;
+        int totalEmpWages = 0;
+        for ( int day=0; day<=NUM_OF_DAYS; day++) {
+            int empCheck = (int) Math.floor(Math.random() *10)%3;
+            switch (empCheck) {
+                case IS_FULL_TIME:
+                    empHour = 8;
+                    break;
+                case IS_PART_TIME:
+                    empHour = 4;
+                    break;
+                default:
+                    empHour = 0;
+            }
+            empWages = empHour * EMP_RATE_PER_HOUR;
+            totalEmpWages += empWages;
+            System.out.println(" employee wage is " + empWages);
         }
-        empWages = empHour * EMP_RATE_PER_HOUR;
-        System.out.println("daily employee wage is " + empWages);
+        System.out.println("total employee wage is " + totalEmpWages);
     }
 }
