@@ -1,13 +1,17 @@
 package com.wage;
 
 public class EmployeeWageComputation {
+    public static final int IS_FULL_TIME = 1;
+    public static final int IS_PART_TIME = 2;
+    public static final int EMP_RATE_PER_HOUR = 20;
+    public static final int NUM_OF_DAYS = 20;
+    public static final int MAX_HOURS_IN_MONTH = 100;
+
     public static void main(String[] args) {
+        empWageComputation();
+    }
+    public static void empWageComputation() {
         System.out.println("Welcome to employee wage computation");
-        final int IS_FULL_TIME = 1;
-        final int IS_PART_TIME = 2;
-        final int EMP_RATE_PER_HOUR = 20;
-        final int NUM_OF_DAYS = 20;
-        final int MAX_HOURS_IN_MONTH = 100;
         int empHour = 0;
         int totalWorkingDays = 0;
         int totalEmpHours = 0;
